@@ -1,0 +1,50 @@
+const int ARDUINO_LED = 13;
+const int MY_PIN = 4;
+
+void setup() {
+  // put your setup code here, to run once:
+  
+  // Set ARDUINO_LED to be an output pin
+  // suggestion #1 - this sets MY_PIN to OUTPUT, which is not quite right
+  // pinMode(MY_PIN,OUTPUT);
+  // suggestion #2 - this sets ARDUINO_LED to OUTPUT, which is what we wanted
+  pinMode(ARDUINO_LED, OUTPUT);
+
+   //  pinMode(4,INPUT );
+   // better version
+   pinMode(MY_PIN,INPUT );
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+
+ 
+
+   // arbitrary condition 4 > 2 -- is this TRUE or FALSE???
+
+   // what is the state of ARDUINO_LED???
+   // ARDUINO_LED is always on because 4 is always greater than 2
+
+   // what is state of ARDUINO_LED?   OFF because 4 is never less than 2
+
+   //int bob
+   // people's choice
+   int volt = digitalRead(MY_PIN);
+
+   // when pin 4 is 5 V, turn on LED. Otherwise, turn off LED
+   // test by connecting a wire between pin 4 and 5V
+   // then test by connecting a wire between pin 4 and GND (aka 0V)
+   //  yay!!! this works!!!
+   if(volt == HIGH) {
+     // turn on ARDUINO_LED
+     digitalWrite(ARDUINO_LED, HIGH);
+   } else {
+      // turn off ARDUINO_LED
+     digitalWrite(ARDUINO_LED, LOW);   
+   }
+
+   // how do I know pin4 is 5V?  How can I read from pin 4 aka MY_PIN?
+
+     
+}
