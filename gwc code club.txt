@@ -1,3 +1,6 @@
+# Novemeber 3,2017 
+# Start time 3:15p.m
+# end time 5:00 p.m
 #What we learned today in Girls who code-a recap...
 # A review on Variables, Operators and conditionals statements 
 
