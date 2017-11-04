@@ -1,0 +1,108 @@
+#What we learned today in Girls who code-a recap...
+# A review on Variables, Operators and conditionals statements 
+
+#Michael our instructor started the lesson by saying random numbers and told us to add them together in addition.
+Random numbers 
+# Michael our instructor told us that whenever we are stuck in a code, use sudo code for it.
+Sudo code is used like a text editor, and a way to program and solve problems in code easier.
+# Pseudocode- this is the accurate spelling for sudo code
+22 1 4 12 16 72 43 -20 4 6 = 160
+1.First we need to know how to implicit using the variables and operators 
+2.Second, define a variable. 
+
+Ex: { int num1=22;
+      int num2=1;
+      int num3=4;
+      "
+      "
+      "
+# quotations are the coutinution of the variables
+# this is like an analog
+      }
+
+int ans=num1+num2
+    if( ans==160)
+    
+Excercise 1: Robot arm 
+
+# think of the robot arm from the crang game 
+
+
+#we start with a height of 100cm;
+int claw_height=100cm;
+#away arm to move down 
+# alien is the object in the crang game for the robot arm to get 
+
+int alien_height=5;
+#usually use the void in arduino
+     loop()
+
+   { 
+   if(claw_height> alien_height)    # when we use operators
+   `    move.down1();
+        close_close();
+     if claw_height=close_height
+     close_claw();
+     move_to_100();
+     exit();
+     break;
+     }
+     
+Excercise 2: Traffic Light 
+ 
+ Red Yellow green
+ 
+ light_on   
+      red_on; off 
+      green_on; off 
+      yellow_on;off 
+   
+ # why do we need a time because without time, how are the drivers are waiting for the light. The whole streets and pedestrians would 
+ mess up.
+ Code:
+ const int delay_time=60;
+ const int yello_int=5;
+ 
+ loop
+ {
+   yellow_off();
+   green_off();
+   red_on();
+   delay(delay_time);
+   red_off();
+   green_on();
+   # don't include cause in the beginning was already included yellow_off();
+   delay(delay_time);
+   green_off();
+   yellow_on();
+   delay(yellow_time);
+   
+  }
+   
+Excercise 3: to get the numbers in the beginning of the lesson to add up together 
+  int sum=0;
+  # we need to a get a number so we name a function called get_num()
+  get_num();
+  
+  loop
+  {
+  int num=get_num();
+  int sum=num+sum;
+    print(sum);
+  if(sum=right_answ) got_prize()
+  }
+   
+   Excercise 4: Fibonacci Sequence 
+   int num = 0;
+   int num 2 = 1;
+   int sum=0;
+   
+   loop
+   { sum= num + num 2
+      print(num2) # instead of sum 
+      `           # it's almost like the swap code thing
+      num=num1;
+      num2=sum;  
+      # if change the   num=num1; and  num2=sum;  would have a iteration change of the of Fibonacci sequence.
+  
+  This is what we learned today in coding. 
