@@ -1,0 +1,109 @@
+Start time 3:23
+End time 5:10 
+11/17/17
+
+Events:
+riot game - eventbrite in Dec 14, 4-7
+Code day- Feb
+Project Android Phone App
+    -Have simulator online
+Tiffany Ho began the meeting 
+-dicussed code day with Carlin 
+
+Project Ideas:
+-Math prime numbers 
+-input text morse code 
+-poker card- chance to win 
+-clothes (the way to see how yourself look) 
+-input frequency 
+-input music notes - to determine the best harmony based on frequency 
+-fix posture(maybe by beep)
+-do our homework
+-robot assistant= blimp 
+-spanish words which conjugates 
+-emulator 
+-check police dring by 
+-remind where you parked (app)
+-remind someone to do something (app)
+- stay productice 
+- when os a good time to take a break
+
+pesudo code:
+Purpose: visually without worrying about compling and know what we are building 
+Reference:
+  -Variables, loops, conditionals, functions, operator 
+    # options that we have
+
+Subject of sudo code:
+Morse code 
+# ideas: Output string of sound and light , what output do you want like an output light and a flashlight
+
+Definitions
+light = 0
+sound = 1
+control_string()
+output_sound()
+output_Light()
+
+sound of light = get_user_input();
+string int word = get_user_message();
+volume = get_prefered variable();
+
+if(sound or light)  {
+  morse_light convert_string()
+  # do something
+ }
+else(sound or light) {
+set_volume()     # there may be something wrong here 
+# do something 
+output_sound(morse_sound)
+}
+
+Speaker: Dr.Helga Farjadi 
+  -study the human visual system
+  -played Prince of persia 1999
+  -mostly used pascal,c
+ 
+Study of vison loss
+Forea- dyfunctional 
+-macular dieses(MD) : usually gentics runs from the family
+
+How does vison loss influence eye movement?
+-study patient 
+  -confronting factors in a slow process 
+  -provide pardigm similuating vison in loss healthy people 
+  
+ -usage of eye tracker machine
+ -1. used the by collecting data on from the eyes
+ -2. coding implement task 
+ 3. coding for anaylzing data 
+ 
+ Code used is matlib 
+  - gives the toolbox - to let the eyecatcher communicate 
+  - subject targeting task in movement 
+  -understand what eyemovement  and help them to understand
+  
+ Study of shorterm memory 
+-by performing a visual search 
+-VSIM - temporary searcg 
+how do you allocate?
+  - the more items you have to memorize it becomes sufficiently bad 
+
+sudo code of shorterm memory 
+# small bit of it 
+num_item = 2;
+# 2,4 How many items it must have 
+if( num items ==2){
+  x1 = 0;
+  y1 = 100;
+  x2 = 0;
+  y2 = -100;
+ plot eclipse( x,y)
+ }
+
+if( num items == N){
+  for(1 = 1 for n) 
+    x=_
+  plot eclipse( x,y)
+  }
+ 
