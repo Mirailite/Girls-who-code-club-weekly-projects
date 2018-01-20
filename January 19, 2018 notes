@@ -1,0 +1,113 @@
+
+January 19, 2018 
+Goal : Creating a Tip calculator
+
+Start 3:15 to 5:00 End Time 
+
+Spended 15 minutes in the classroom to do psuedo coding and then went to the computer lab.
+
+Pseudo coding 
+function ( input, percentage):
+tip = input (convert) percentage (convert)
+tip = input (convert) percentage (convert)/100 # in order to make in to a decimal
+return tip }
+
+}
+
+Example of a piece of code
+
+package ___name____.gwc.smhs.tipcalculator;   // sets the libraries inside like a package wrapping itself.
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
+
+# the import stuff helps the following of the code in the body of the code
+
+public class Tipactivity extends AppCompatActivity implements  {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_tipactivity);
+        EditText price = (EditText) findViewById(R.id.Price);
+        price.setText("");
+        price.addTextChangedListener(new Pricewatcher());
+        tip.addTextChangedLister(new Tipwatcher());
+
+
+
+    }
+/*
+    @Override
+    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+    }
+
+    @Override
+    public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+    }
+
+    @Override
+    public void afterTextChanged(Editable s) {
+        TextView text = (TextView) findViewById(R.id.TipIn);
+        float tip = 0.0f;
+        try {
+            tip = Float.parseFloat(s.toString());
+        } catch (NumberFormatException nfe) {
+        }
+        text.setText("Tip" + tip);
+        TextView percent = (TextView) findViewById(R.id.Percentage);
+        float percentage = 100.0f;
+        try {
+            percentage = Float.parseFloat(s.toString());
+        } catch (NumberFormatException nfe) {
+        }
+        percent.setText("Percentage" + tip / percentage);
+    }
+
+    }
+
+}*/ # this is for commenting out of the java code 
+
+# we make two private classes cause if we have two inputs of the code the code would not be able to work..
+class Tipwatcher implements TextWatcher {
+
+    @Override
+    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+    }
+
+    @Override
+    public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+    }
+
+    @Override
+    public void afterTextChanged(Editable s) {
+
+    }
+}
+class Pricewatcher implements TextWatcher{
+
+    @Override
+    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+    }
+
+    @Override
+    public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+    }
+
+    @Override
+    public void afterTextChanged(Editable s) {
+
+    }
+}
