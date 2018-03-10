@@ -1,0 +1,88 @@
+turing a float to a string 
+Start time: 
+3:15
+End time:
+5:00
+
+package carlin.gwc.smhs.tipcalculator;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.widget.TextView;
+import android.widget.EditText;
+
+public class topot extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_topot);
+
+        TextView output = findViewById(R.id.Tipper);
+        PriceWatcher newPrice = new PriceWatcher(output);
+        EditText price = findViewById(R.id.Price);
+        price.addTextChangedListener(newPrice);
+        TipperWatcher newTip = new TipperWatcher(output);
+        EditText Tip = findViewById(R.id.Tipper);
+        Tip.addTextChangedListener(newTip);
+    }
+}
+class PriceWatcher implements TextWatcher {
+    TextView output;
+    PriceWatcher(TextView in_output) {
+        output = in_output;
+        String myString = "1234";
+        int foo = Integer.parseInt(myString);
+
+
+    }
+
+    @Override
+    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+    }
+
+    @Override
+    public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+    }
+
+    @Override
+    public void afterTextChanged(Editable text) {
+        output.setText(text);
+    }
+    public float CalulateTip (String price,String tipper){ /// type of our function, java is specific
+        float price1 = Float.parseFloat(price);
+        float price2 = Float.parseFloat(tipper);
+        float tipper100 = price2/100;
+        float tip = price1 *tipper100;
+        float total = tip + price1;
+        return total; /// add of this later, returning the tip separately?
+    }
+
+
+}
+class TipperWatcher implements TextWatcher {
+    TextView output;
+    TipperWatcher(TextView in_output) {
+        output = in_output;
+
+    }
+
+    @Override
+    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+    }
+
+    @Override
+    public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+    }
+
+    @Override
+    public void afterTextChanged(Editable text) {
+        output.setText(text);
+    }
+}
