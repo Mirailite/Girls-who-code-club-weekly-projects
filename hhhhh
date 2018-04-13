@@ -1,0 +1,95 @@
+Notes 
+https://docs.oracle.com/javase/tutorial/uiswing/components/textfield.html
+
+when event listener 
+Create an interface that will be implemented by your activity:
+
+public interface OnCustomEventListener {
+    void onEvent();
+}
+
+public void setCustomEventListener(OnCustomEventListener eventListener) {
+    mListener = eventListener;
+}
+Now you need to know when the event is actually occurring. For example when the user touches a point on screen, override onTouchEvent method:
+
+onTouchEvent(MotionEvent ev) {
+    if (ev.getAction==MotionEvent.ACTION_DOWN) {
+        if(mListener!=null) 
+            mListener.onEvent();
+    }
+}
+Similarly, you can create a specific event that you want. (examples could be touch down, wait for exactly 2 seconds and release- you would need to do some logic inside touch event).
+
+In your activity, you can use the customView object to set an eventListener as such:
+
+ customView.setCustomEventListener(new OnCustomEventListener() {
+    public void onEvent() {
+        //do whatever you want to do when the event is performed.
+    }
+ });   
+shareimprove this answer
+edited Jul 24 '15 at 20:18
+
+Seraphim's
+6,6831262105
+answered Nov 28 '11 at 8:20
+
+rDroid
+3,08811929
+Are the parentheses on the OnCustomEventListener interface definition a typo? – Jacob Wan Mar 7 '13 at 17:12
+1
+Oops! yes it is a typo, corrected it. thanks – rDroid Mar 9 '13 at 4:59 
+rDroid, thanks for the example! Should the OnCustomEventListener interface be declared inside or outside the CustomView class? – Brabbeldas May 16 '15 at 19:31
+usually interface is declared inside the view classes. – rDroid May 18 '15 at 6:14
+Sorry for asking late but I didnt get the purpose of setCustomEventListener, you havent called this function anywhere in the code – user4409899 Mar 4 '16 at 7:44
+show 2 more comments
+up vote
+5
+down vote
+It can be done in the following way
+
+First create an interface class :
+
+public interface OnStopTrackEventListener {
+    public void onStopTrack();
+}
+Then create the class that controls the interface :
+
+public class Player {
+
+    private OnStopTrackEventListener mOnStopTrackEventListener;
+
+    public void setOnStopTrackEventListener(OnStopTrackEventListener eventListener)
+    {
+        mOnStopTrackEventListener = eventListener;
+    }
+
+    public void stop()
+    {
+        if(mOnStopTrackEventListener != null)
+        {
+            mOnStopTrackEventListener.onStopTrack();
+        }
+
+    }
+}
+That is all. Let's use it now
+
+Player player = new Player();
+player.stop(); //We are stopping music
+player.setOnStopTrackEventListener(new OnStopTrackEventListener() {
+      @Override
+      public void onStopTrack() {
+           //Code to work when music stops
+      }
+});
+
+
+https://developer.android.com/studio/write/java8-support.html
+
+
+Parcelable 
+= can implement anything that is code 
+
+
