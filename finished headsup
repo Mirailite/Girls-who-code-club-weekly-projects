@@ -1,0 +1,136 @@
+package com.example.smhs.headsup;
+
+import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class Headsup extends AppCompatActivity implements Runnable {
+    ///didn't create a function
+    int time = 60;
+    int red = 0;
+    int score = 0;
+
+    String [] blue = {
+            "word",
+            "reddish",
+            "spy",
+            "pennies",
+
+    };
+    Handler handler;
+    DoSomething doSomething = new DoSomething();
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_headsup);
+       // Words.setText(.getText());
+        EditText Word = (EditText) findViewById(R.id.Word);
+        Word.setText(blue [red]);
+        red = red + 1;
+      ///  Word.setText(blue [1]);
+       /// Word.setText(blue [2]);
+
+
+
+        this.handler = new Handler();
+        Thread myawes = new Thread(this);
+        myawes.start();
+       // blue [0];
+
+
+                ///runnable a part of function that runs
+
+
+
+        ///    Word.addTextChangedListener(new Wording);
+
+
+        /// Set Text, set View
+        ///strings = put words in string in arrary 9 like a float
+///how do you touch the interface to do the wobble ?
+        /// make a variable = inside rhe variable would have that
+ /// string implementing inside word
+        // Scroe and time function to call back the function
+     ///   int score = 0;
+    ///    strings = [];
+
+
+
+    }
+    public void onTime() {
+        time--;
+        TextView display = findViewById(R.id.Time);
+        display.setText("" + time +  "score:" + score); ///int -> string
+    }
+
+
+    public void oncorrect (View button1){
+        EditText Word = (EditText) findViewById(R.id.Word);
+
+        Word.setText(blue [red]);
+        red = red + 1;
+        score = score + 1;
+        if (red >= Word.length()){
+            red = 0;
+
+        }
+
+    }
+    public void onwrong (View button2){
+        EditText Word = (EditText) findViewById(R.id.Word);
+
+        Word.setText(blue [red]);
+        red = red + 1;
+        score = score - 1;
+        if (red >= Word.length()){
+            red = 0;
+        }
+
+    }
+    @Override
+    public void run() {
+        while (true){
+            ///sends message
+            this.handler.post(doSomething);
+            /// do something and wait
+            try{
+
+
+                Thread.sleep(1000);
+
+            } catch (InterruptedException e){
+               /// e.PrintStack Trace
+                // do nothing system triggers an exception , something that happen and tou didn't expect and put tehe code
+                // different types of exception? , ruuning that emulator, exception in your program, and generates , here we don't do anything
+                // when the user closes the program
+            }
+
+        }
+    }
+    class DoSomething implements Runnable{
+
+        @Override
+        public void run() {
+            onTime();
+
+        }
+    }
+}
+///class Wording implements TextWatcher;
+///button thes are for the buttons and the
+    ///public class Yat
+     ///   score += 1;
+
+  ///  public class No;
+     ///   score -= 1;
+
+///class somehtinf parceables
+
+///parceables are able to create the implementation of doing tgat
+
+/// try to do this later
