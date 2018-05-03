@@ -6,8 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-
+# this is creating a class thread...
 public class Headsup extends AppCompatActivity implements Runnable {
+# Runnable defines as a method to run
     ///didn't create a function
     int time = 60;
     int red = 0;
